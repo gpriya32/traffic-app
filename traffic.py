@@ -8,7 +8,6 @@ from labels import label
 from os import listdir
 from os.path import isfile, join
 from PIL import Image,ImageOps
-import imageio
 import io
 
 
