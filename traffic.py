@@ -45,7 +45,7 @@ def import_predict(image_data):
        
         prediction = model.predict(image_array)
         res = np.argmax(prediction[0])
-        return res,
+        return res
 
 def run():
 
