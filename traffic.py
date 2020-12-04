@@ -61,7 +61,7 @@ def run():
     st.set_option('deprecation.showfileUploaderEncoding', False)
     onlyfiles = [f for f in listdir("Meta/") if isfile(join("Meta/", f))]
     if st.sidebar.checkbox("Example Run",False,key='1'):
-        file_upload = st.sidebar.selectbox("Choose an image for classification", onlyfiles)
+        file_upload = st.sidebar.selectbox("Choose an image for Sign-Pediction", onlyfiles)
           
         if file_upload is not None:
             path="Meta/"+file_upload
@@ -73,7 +73,7 @@ def run():
                 output=label[lab]
                 st.success('The Traffic-Sign is {}'.format(output))
 
-    img_upload = st.file_uploader("Choose an image for classification", type=["jpg","png"])
+    img_upload = st.file_uploader("Choose an image for Sign-Pediction", type=["jpg","png"])
 
 
     if img_upload is not None:
