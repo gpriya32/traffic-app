@@ -59,19 +59,19 @@ def run():
     # st.sidebar.image(image_hospital)
 
     st.set_option('deprecation.showfileUploaderEncoding', False)
-    onlyfiles = [f for f in listdir("C:/Users/Priyanka/Desktop/traffic/Meta/") if isfile(join("C:/Users/Priyanka/Desktop/traffic/Meta/", f))]
+    onlyfiles = [f for f in listdir("Meta/") if isfile(join("Meta/", f))]
     if st.sidebar.checkbox("Example Run",False,key='1'):
         file_upload = st.sidebar.selectbox("Choose an image for classification", onlyfiles)
           
         if file_upload is not None:
-            path="C:/Users/Priyanka/Desktop/traffic/Meta/"+file_upload
+            path="Meta/"+file_upload
             image = Image.open(path)
             st.sidebar.image(image,caption="Uploaded Image",use_column_width=True)
             if st.sidebar.button('Predict'): 
                 st.sidebar.write("Classifying...")
                 lab=predict(path)
                 output=label[lab]
-                st.success('The output is {}'.format(output))
+                st.success('The Traffic-Sign is {}'.format(output))
 
     img_upload = st.file_uploader("Choose an image for classification", type=["jpg","png"])
 
@@ -84,7 +84,7 @@ def run():
             st.write("Classifying...")
             lab=import_predict(image)
             output=label[lab]
-            st.success('The output is {}'.format(output))
+            st.success('The Traffic-Sign is {}'.format(output))
     
 
 if __name__ == '__main__':
