@@ -11,4 +11,4 @@ For working visit : https://www.kaggle.com/pg1007/traffic-model
 
 Working of App
 
-![Traffic Signal Detection App](img.)
+![Traffic Signal Detection App](input_output.PNG)
