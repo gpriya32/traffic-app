@@ -11,7 +11,7 @@ For working visit : https://www.kaggle.com/pg1007/traffic-model
 
 Flow-Chart of Methodology
 
-![Flow-model](flow1.PNG)
+![Flow-model](flow1.png)
 
 Working of App
 
